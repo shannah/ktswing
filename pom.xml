@@ -23,6 +23,11 @@
     <description>Kotlin DSL for building Swing UIs declaratively.</description>
     <url>https://github.com/shannah/ktswing</url>
 
+    <properties>
+        <!-- We'll set this via environment variable in CI -->
+        <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
+    </properties>
+
     <licenses>
         <license>
             <!-- Example: MIT -->
@@ -123,6 +128,10 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <!-- Use the property as the passphrase -->
+                    <passphrase>${gpg.passphrase}</passphrase>
+                </configuration>
             </plugin>
         </plugins>
     </build>
