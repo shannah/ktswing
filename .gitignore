@@ -1,0 +1,89 @@
+# ---------------------------------------------------
+# OS-Specific and Editor Files
+# ---------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------
+# IntelliJ IDEA
+# ---------------------------------------------------
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+# IntelliJ "workspace" and other ephemeral files
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/modules.xml
+.idea/**/modules.xml
+
+# ---------------------------------------------------
+# Maven
+# ---------------------------------------------------
+# Ignore Maven's build output in "target"
+target/
+# If you have multiple modules, they'll each have their own target/ directories:
+**/target/
+
+# If you generate site reports locally
+site/
+
+# ---------------------------------------------------
+# Gradle (if you ever use a Gradle wrapper for something)
+# ---------------------------------------------------
+.gradle/
+build/
+**/build/
+!gradle-wrapper.jar
+.gradle-cache/
+gradlew
+gradlew.bat
+
+# ---------------------------------------------------
+# Logs, Temp Files
+# ---------------------------------------------------
+*.log
+log/
+logs/
+*.tmp
+*.swp
+*.swo
+
+# ---------------------------------------------------
+# Kotlin / Java
+# ---------------------------------------------------
+# Ignore compiled class files
+*.class
+# Lombok generated
+generated/
+
+# ---------------------------------------------------
+# Packaging
+# ---------------------------------------------------
+# Skip packaged release zips/jars
+*.jar
+*.war
+*.ear
+*.zip
+
+# ---------------------------------------------------
+# Secrets or Credentials
+# ---------------------------------------------------
+# If you store environment files or other sensitive data
+.env
+*.keystore
+*.jks
+secrets.txt
+
+# ---------------------------------------------------
+# Misc
+# ---------------------------------------------------
+*.bak
+*.old
+*.orig
+
+# End of .gitignore

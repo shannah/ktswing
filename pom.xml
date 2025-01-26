@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+             http://maven.apache.org/POM/4.0.0
+             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ca.weblite</groupId>
+    <artifactId>ktswing-root</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>ktswing-root</name>
+
+    <!--
+       =========
+       Central Requirements
+       =========
+       1. <url>, <description>, and <licenses>
+       2. <scm> (with <connection>, <developerConnection>, <url>)
+       3. <developers>
+    -->
+    <description>Kotlin DSL for building Swing UIs declaratively.</description>
+    <url>https://github.com/shannah/ktswing</url>
+
+    <licenses>
+        <license>
+            <!-- Example: MIT -->
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <!--
+            For a GitHub-based project, typical example:
+            If your repository is public on GitHub:
+        -->
+        <connection>scm:git:git://github.com/shannah/ktswing.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:shannah/ktswing.git</developerConnection>
+        <url>https://github.com/shannah/ktswing</url>
+        <!-- If you have a tag base, e.g. <tag>HEAD</tag> or <tag>v1.0.0</tag> -->
+    </scm>
+
+    <developers>
+        <developer>
+            <id>shannah</id>
+            <name>Steve Hannah</name>
+            <email>steve@weblite.ca</email>
+            <!-- optional: <organization>... </organization> <organizationUrl>... </organizationUrl> -->
+        </developer>
+        <!-- additional <developer> entries if multiple contributors -->
+    </developers>
+
+    <modules>
+        <module>codegen</module>
+        <module>main</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- 1) Attach a sources-jar (containing .java/.kt files) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <!-- 'verify' is a convenient phase for producing the jars before deploy -->
+                        <phase>verify</phase>
+                        <goals>
+                            <!-- 'jar-no-fork' means it won't run a separate compile;
+                                 it just packages your existing sources into a jar. -->
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 2) Attach a javadoc-jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- The Nexus Staging Maven Plugin -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <!-- 'ossrh' matches the <serverId> in your <settings.xml> (or GitHub Actions) -->
+                    <serverId>ossrh</serverId>
+                    <!-- Switch if your group uses 'https://oss.sonatype.org/' instead -->
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+
+            <!-- The GPG/Sign plugin (required for Maven Central) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

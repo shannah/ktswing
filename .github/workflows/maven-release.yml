@@ -1,0 +1,36 @@
+name: Build and Deploy to Maven Central
+
+on:
+  push:
+    tags:
+      - 'v*'  # e.g. v1.0.0
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          # Provide credentials for Sonatype + GPG to sign and deploy.
+          server-id: 'ossrh'
+          server-username: ${{ secrets.OSSRH_USERNAME }}
+          server-password: ${{ secrets.OSSRH_PASSWORD }}
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Build and Deploy
+        run: mvn -B clean deploy -P release
+        # 'release' is just an example of a profile you'd set up in your pom
+        # that includes signing and distribution to OSSRH.
+
+      - name: Verify
+        if: always()
+        run: |
+          echo "Build completed. If successful, your artifacts should be staged on Sonatype."
