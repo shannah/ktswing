@@ -26,7 +26,7 @@ jobs:
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Build and Deploy
-        run: mvn -B clean deploy -P release
+        run: mvn -B clean deploy -P release --batch-mode -ntp
         # 'release' is just an example of a profile you'd set up in your pom
         # that includes signing and distribution to OSSRH.
 

@@ -27,4 +27,4 @@ jobs:
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Build and test with Maven
-        run: mvn clean verify
+        run: mvn clean verify --batch-mode -ntp
