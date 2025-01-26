@@ -63,6 +63,37 @@
         <module>main</module>
     </modules>
 
+    <profiles>
+        <profile>
+            <id>sign-artifacts</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <!-- Use the property as the passphrase -->
+                            <passphrase>${gpg.passphrase}</passphrase>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <!-- 1) Attach a sources-jar (containing .java/.kt files) -->
@@ -86,15 +117,14 @@
 
             <!-- 2) Attach a javadoc-jar -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.4.1</version>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>1.8.10</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
                         <phase>verify</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>javadocJar</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -110,27 +140,7 @@
                     <serverId>ossrh</serverId>
                     <!-- Switch if your group uses 'https://oss.sonatype.org/' instead -->
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
-
-            <!-- The GPG/Sign plugin (required for Maven Central) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!-- Use the property as the passphrase -->
-                    <passphrase>${gpg.passphrase}</passphrase>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>

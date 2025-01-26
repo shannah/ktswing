@@ -58,7 +58,7 @@ jobs:
 
     # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
-        run: mvn -B clean deploy --batch-mode -ntp
+        run: mvn -B clean deploy --batch-mode -ntp -Psign-artifacts
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}

@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codegen/src/test/kotlin/org/example/HelloTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/main/kotlin/org/example/Hello.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/test/kotlin/org/example/HelloTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/example/Hello.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/org/example/HelloTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/master.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-release.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codegen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +48,10 @@
     "Maven.main [compile].executor": "Run",
     "Maven.root [clean].executor": "Run",
     "Maven.root [compile].executor": "Run",
+    "Maven.root [help:effective-pom].executor": "Run",
     "Maven.root [install].executor": "Run",
+    "Maven.root [package].executor": "Run",
+    "Maven.root [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -74,6 +68,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steve\ktswing\codegen" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn help:effective-pom" />
+    </option>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

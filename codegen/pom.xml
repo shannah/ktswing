@@ -9,7 +9,6 @@
         <groupId>ca.weblite</groupId>
         <artifactId>ktswing-root</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../</relativePath> <!-- path to the parent pom -->
     </parent>
 
     <artifactId>ktswing-codegen</artifactId>

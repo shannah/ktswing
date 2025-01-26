@@ -11,9 +11,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>main</artifactId>
+    <artifactId>ktswing-main</artifactId>
     <packaging>jar</packaging>
-    <name>main</name>
+    <name>ktswing-main</name>
 
     <properties>
         <kotlin.version>1.8.22</kotlin.version>

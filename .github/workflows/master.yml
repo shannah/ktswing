@@ -23,6 +23,6 @@ jobs:
           gpg-passphrase: '${{ secrets.GPG_PASSPHRASE }}'
 
       - name: Build and test with Maven
-        run: mvn clean verify --batch-mode -ntp
+        run: mvn clean verify --batch-mode -ntp -Psign-artifacts
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
