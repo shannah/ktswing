@@ -1,4 +1,3 @@
-```markdown
 # Kotlin Swing DSL (`ktswing`)
 
 ![Maven Central](https://img.shields.io/maven-central/v/ca.weblite/ktswing-main.svg?label=Maven%20Central)
@@ -423,4 +422,3 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 *Developed with ❤️ by Weblite.ca*
-```
