@@ -19,12 +19,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          # Provide credentials for Sonatype + GPG to sign and deploy.
-          server-id: 'ossrh'
-          server-username: ${{ secrets.OSSRH_USERNAME }}
-          server-password: ${{ secrets.OSSRH_PASSWORD }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-          gpg-passphrase: ''
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Build and test with Maven
         run: mvn clean verify --batch-mode -ntp
