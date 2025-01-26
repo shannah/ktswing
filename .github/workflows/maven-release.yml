@@ -23,7 +23,7 @@ jobs:
 
       # 2) Set up JDK + GPG for signing
       - name: Set up JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -44,7 +44,16 @@ jobs:
             --batch-mode \
             -ntp
 
-      # 4) Build and Deploy artifacts to Maven Central
+      - name: Debug environment
+        run: |
+          env | grep OSSRH
+
+      - name: Print contents of ~/.m2/settings.xml
+        run: cat ~/.m2/settings.xml
+
+
+
+    # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
         run: mvn -B clean deploy --batch-mode -ntp
         env:
