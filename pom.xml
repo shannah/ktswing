@@ -110,7 +110,7 @@
                     <serverId>ossrh</serverId>
                     <!-- Switch if your group uses 'https://oss.sonatype.org/' instead -->
                     <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
 
