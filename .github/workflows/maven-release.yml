@@ -13,24 +13,42 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      # 1) Extract version from tag (v1.0.0 -> 1.0.0)
+      - name: Determine Release Version
+        run: |
+          # GITHUB_REF_NAME is something like "v1.0.0"
+          # Strip leading "v" to get "1.0.0"
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      # 2) Set up JDK + GPG for signing
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-          # Provide credentials for Sonatype + GPG to sign and deploy.
           server-id: 'ossrh'
           server-username: ${{ secrets.OSSRH_USERNAME }}
           server-password: ${{ secrets.OSSRH_PASSWORD }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
+      # 3) Update all modules' version in POM to match the release version
+      - name: Set Maven project version
+        run: |
+          mvn versions:set \
+            -DnewVersion="${{ env.VERSION }}" \
+            -DprocessAllModules=true \
+            -DgenerateBackupPoms=false
+
+      # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
         run: mvn -B clean deploy -P release --batch-mode -ntp
-        # 'release' is just an example of a profile you'd set up in your pom
-        # that includes signing and distribution to OSSRH.
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
+      # 5) Optional verification message
       - name: Verify
         if: always()
         run: |
-          echo "Build completed. If successful, your artifacts should be staged on Sonatype."
+          echo "Build completed. If successful, your artifacts should be staged and automatically released on Sonatype."
