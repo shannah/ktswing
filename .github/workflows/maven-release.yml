@@ -32,6 +32,7 @@ jobs:
           server-password: ${{ secrets.OSSRH_PASSWORD }}
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          overwrite-settings: true
 
       # 3) Update all modules' version in POM to match the release version
       - name: Set Maven project version
@@ -43,7 +44,7 @@ jobs:
 
       # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
-        run: mvn -B clean deploy -P release --batch-mode -ntp
+        run: mvn -B clean deploy --batch-mode -ntp
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
