@@ -28,8 +28,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           server-id: 'ossrh'
-          server-username: ${{ secrets.OSSRH_USERNAME }}
-          server-password: ${{ secrets.OSSRH_PASSWORD }}
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_PASSWORD
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           overwrite-settings: true
@@ -40,13 +40,17 @@ jobs:
           mvn versions:set \
             -DnewVersion="${{ env.VERSION }}" \
             -DprocessAllModules=true \
-            -DgenerateBackupPoms=false
+            -DgenerateBackupPoms=false \
+            --batch-mode \
+            -ntp
 
       # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
         run: mvn -B clean deploy --batch-mode -ntp
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
 
       # 5) Optional verification message
       - name: Verify
