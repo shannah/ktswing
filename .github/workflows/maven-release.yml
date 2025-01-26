@@ -47,6 +47,9 @@ jobs:
       - name: Debug environment
         run: |
           env | grep OSSRH
+        env:
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
 
       - name: Print contents of ~/.m2/settings.xml
         run: cat ~/.m2/settings.xml
