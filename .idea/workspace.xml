@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/master.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-release.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codegen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -40,10 +44,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Kotlin.HelloKt.executor": "Run",
+    "Kotlin.SampleKt.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.codegen [compile].executor": "Run",
     "Maven.codegen [install].executor": "Run",
     "Maven.ktswing [compile].executor": "Run",
+    "Maven.ktswing-root [clean].executor": "Run",
+    "Maven.ktswing-root [install].executor": "Run",
     "Maven.main [clean].executor": "Run",
     "Maven.main [compile].executor": "Run",
     "Maven.root [clean].executor": "Run",
@@ -59,14 +66,23 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "azul-21",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/steve/ktswing",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steve\ktswing" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steve\ktswing\jgoodies\src\main\kotlin\ca\weblite\ktswing\jgoodies" />
+      <recent name="C:\Users\steve\ktswing\jgoodies\src\main\kotlin\ca\weblite\ktswing\jgoodies\extensions" />
       <recent name="C:\Users\steve\ktswing\codegen" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ca.weblite.ktswing.jgoodies" />
     </key>
   </component>
   <component name="RunAnythingCache">

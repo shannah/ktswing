@@ -1,5 +1,6 @@
 package ca.weblite.ktswing.extensions
 
+import ca.weblite.ktswing.AutoAddDisabled
 import ca.weblite.ktswing.BorderPane
 import javax.swing.JSplitPane
 import java.awt.Container
@@ -12,7 +13,7 @@ import java.awt.Container
 fun Container.isAutoAddEnabled(): Boolean {
     return when (this) {
         is JSplitPane -> false
-        is BorderPane -> false
+        is AutoAddDisabled -> false
         // Add other specialized containers here as needed
         else -> true
     }

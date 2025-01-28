@@ -11,35 +11,46 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ktswing-codegen</artifactId>
+    <artifactId>ktswing-jgoodies</artifactId>
     <packaging>jar</packaging>
-    <name>ktswing-codegen</name>
+    <name>ktswing-jgoodies</name>
 
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- etc. -->
     </properties>
 
     <dependencies>
-        <!-- Kotlin standard library -->
+        <!-- Kotlin stdlib for your main code -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
 
-        <!-- If you need Kotlin reflect or coroutines or anything else, add them -->
+        <!-- *** Depend on the codegen JAR *** -->
         <dependency>
-            <groupId>org.reflections</groupId>
-            <artifactId>reflections</artifactId>
-            <version>0.10.2</version>
+            <groupId>ca.weblite</groupId>
+            <artifactId>ktswing-main</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.jgoodies</groupId>
+            <artifactId>jgoodies-forms</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+
+        <!-- JUnit, etc. if you have tests -->
     </dependencies>
 
     <build>
+        <!-- Our main Kotlin sources are in src/main/kotlin -->
         <sourceDirectory>src/main/kotlin</sourceDirectory>
+
         <plugins>
-            <!-- Kotlin Maven plugin to compile your codegen code -->
+            <!-- 2) Kotlin Maven Plugin: compile the main code + the generated code -->
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -51,25 +62,18 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
+                        <configuration>
+                            <jvmTarget>17</jvmTarget> <!-- or "21" if you want the latest -->
+                            <!-- or use the 'release' parameter if you prefer -->
+                            <sourceDirs>
+                                <sourceDir>src/main/kotlin</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>9</source>
-                    <target>9</target>
-                </configuration>
-            </plugin>
+
+
         </plugins>
     </build>
-
 </project>

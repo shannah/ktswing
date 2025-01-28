@@ -26,6 +26,7 @@
     <properties>
         <!-- We'll set this via environment variable in CI -->
         <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
+        <kotlin.version>1.8.22</kotlin.version>
     </properties>
 
     <licenses>
@@ -61,6 +62,7 @@
     <modules>
         <module>codegen</module>
         <module>main</module>
+        <module>jgoodies</module>
     </modules>
 
     <profiles>

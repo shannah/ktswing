@@ -11,7 +11,7 @@ import javax.swing.JPanel
  * Setting one of these properties calls add(component, BorderLayout.XXX) internally,
  * replacing any existing component in that region.
  */
-class BorderPane : JPanel(BorderLayout()) {
+class BorderPane : JPanel(BorderLayout()), AutoAddDisabled {
 
     var north: Component?
         get() = (this.layout as? BorderLayout)?.getLayoutComponent(this, BorderLayout.NORTH)
