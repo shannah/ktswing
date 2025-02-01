@@ -1,5 +1,8 @@
 package org.example
 import ca.weblite.ktswing.*
+import ca.weblite.ktswing.extensions.classList
+import ca.weblite.ktswing.style.Stylesheet
+import javax.swing.JButton
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
@@ -51,6 +54,7 @@ fun main(args: Array<String>) {
                         addActionListener {
                             println("OK clicked!")
                         }
+                        classList.add("green")
                     }
 
                     label {
@@ -79,7 +83,15 @@ fun main(args: Array<String>) {
                 }
             }
 
-
+            val styles = Stylesheet()
+            styles.register(JButton::class.java) {
+                it.font = it.font.deriveFont(20f)
+            }
+            styles.register(".green", JButton::class.java) {
+                it.foreground = java.awt.Color.GREEN
+                it.font = it.font.deriveFont(40f)
+            }
+            styles.apply(this)
             isVisible = true
         }
     }
