@@ -1,6 +1,7 @@
 package org.example
 import ca.weblite.ktswing.*
 import ca.weblite.ktswing.extensions.classList
+import ca.weblite.ktswing.extensions.factory
 import ca.weblite.ktswing.style.Stylesheet
 import java.awt.Container
 import javax.swing.*
@@ -16,6 +17,11 @@ fun main(args: Array<String>) {
             // Because JFrame is a Container, we can call DSL extension functions on it.
             // For example, "panel { ... }", "button { ... }", "label { ... }", etc.
             with (contentPane) {
+                factory(JButton::class.java) {
+                    val btn = JButton()
+                    btn.border = BorderFactory.createLineBorder(java.awt.Color.BLUE)
+                    btn
+                }
                 panel {
                     classList.add("super-panel")
                     label {
