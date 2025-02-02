@@ -6,6 +6,7 @@ import javax.swing.JComponent
 class CssSelector: Selector {
     private val parent: Selector?
     private val localSelector: SelectorDescription;
+    private val recursiveParent: Boolean;
 
     private class SelectorDescription {
         var id: String? = null
@@ -35,8 +36,16 @@ class CssSelector: Selector {
         if (spacePos == -1) {
             parent = null
             localSelector = SelectorDescription(selector.trim())
+            recursiveParent = true
         } else {
-            parent = CssSelector(selector.trim().substring(0, spacePos).trim())
+            val parentString = selector.trim().substring(0, spacePos).trim()
+            if (parentString.endsWith(">")) {
+                parent = CssSelector(parentString.substring(0, parentString.length-1).trim())
+                recursiveParent = false
+            } else {
+                parent = CssSelector(parentString)
+                recursiveParent = true
+            }
             localSelector = SelectorDescription(selector.trim().substring(spacePos).trim())
         }
     }
@@ -61,12 +70,20 @@ class CssSelector: Selector {
         }
         if (target is Component) {
             val comp = target as Component
-            if (parent != null) {
-                if (comp.parent == null) {
-                    return false
-                }
-                return parent.matches(comp.parent)
+            if (comp.parent == null) {
+                return false
             }
+
+            val parentMatch =  parent.matches(comp.parent)
+            if (parentMatch) {
+                return true
+            }
+
+            if (recursiveParent && comp.parent.parent != null) {
+                return parent.matches(comp.parent.parent)
+            }
+
+            return false
         }
 
         return false
