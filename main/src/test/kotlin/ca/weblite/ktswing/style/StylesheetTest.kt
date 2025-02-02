@@ -209,4 +209,35 @@ class StylesheetTest {
                 "Button should not be styled when no style is registered")
     }
 
+    @Test
+    fun `test chain`() {
+        val stylesheet = Stylesheet() {
+            register(JPanel::class.java) chain register(JButton::class.java) {
+                font = font.deriveFont(20f)
+            }
+        }
+
+        val panel = JPanel()
+        val button = JButton("Click Me")
+        panel.add(button)
+        stylesheet.apply(panel)
+
+        assertEquals(20, button.font.size, "Button font size should be 20")
+    }
+
+    @Test
+    fun `test chain panel in button`() {
+        val stylesheet = Stylesheet() {
+            panel{} chain button {
+                font = font.deriveFont(20f)
+            }
+        }
+
+        val panel = JPanel()
+        val button = JButton("Click Me")
+        panel.add(button)
+        stylesheet.apply(panel)
+
+        assertEquals(20, button.font.size, "Button font size should be 20")
+    }
 }
