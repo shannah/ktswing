@@ -90,10 +90,16 @@ class CssSelector: Selector {
     }
 
     private fun matchId(comp: Component): Boolean {
+        if (localSelector.id == null) {
+            return true
+        }
         return comp.name == localSelector.id
     }
 
     private fun matchClass(comp: Component): Boolean {
+        if (localSelector.classes.isEmpty()) {
+            return true
+        }
         if (comp is JComponent) {
             val jcomp = comp as JComponent
             val cssClass = jcomp.getClientProperty("cssClasses");

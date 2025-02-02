@@ -86,22 +86,47 @@ fun main(args: Array<String>) {
 
             val styles = Stylesheet()
             styles.register(JButton::class.java) {
-                it.font = it.font.deriveFont(20f)
+                font = font.deriveFont(20f)
             }
             styles.register(".green", JButton::class.java) {
-                it.foreground = java.awt.Color.GREEN
-                it.font = it.font.deriveFont(40f)
+                foreground = java.awt.Color.GREEN
+                font = font.deriveFont(40f)
             }
             styles.register(".super-panel", JPanel::class.java) {
-                it.border = BorderFactory.createLineBorder(java.awt.Color.RED)
+                border = BorderFactory.createLineBorder(java.awt.Color.RED)
             }
             styles.register(".super-panel > *", JLabel::class.java){
-                it.font = it.font.deriveFont(30f)
+                font = font.deriveFont(30f)
             }
             styles.register(".red", JLabel::class.java) {
-                it.foreground = java.awt.Color.RED
+                foreground = java.awt.Color.RED
             }
             styles.apply(this)
+
+            val styles2 = Stylesheet(){
+                button {
+                    font = font.deriveFont(30f)
+                }
+
+                button(".green") {
+                    foreground = java.awt.Color.GREEN
+                    font = font.deriveFont(50f)
+                }
+
+                panel(".super-panel") {
+                    border = BorderFactory.createLineBorder(java.awt.Color.RED)
+
+                }
+
+                label(".super-panel > *") {
+                    font = font.deriveFont(40f)
+                }
+
+                label(".red") {
+                    foreground = java.awt.Color.RED
+                }
+
+            }
             isVisible = true
         }
     }
