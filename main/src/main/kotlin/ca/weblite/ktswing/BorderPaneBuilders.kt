@@ -1,5 +1,6 @@
 package ca.weblite.ktswing
 
+import ca.weblite.ktswing.extensions.isAutoAddEnabled
 import java.awt.Container
 
 /**
@@ -18,6 +19,8 @@ import java.awt.Container
 fun Container.borderPane(init: BorderPane.() -> Unit = {}): BorderPane {
     val borderPane = BorderPane()
     borderPane.init()
-    this.add(borderPane)
+    if (isAutoAddEnabled()) {
+        this.add(borderPane)
+    }
     return borderPane
 }
