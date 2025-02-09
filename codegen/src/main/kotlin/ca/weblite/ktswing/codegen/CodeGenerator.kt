@@ -125,6 +125,7 @@ object CodeGenerator {
                 package $newPackage
 
                 import ca.weblite.ktswing.extensions.isAutoAddEnabled
+                import ca.weblite.ktswing.extensions.getFactoryForComponent
                 import javax.swing.*
                 import java.awt.Container
                 import java.awt.Component
@@ -168,7 +169,8 @@ object CodeGenerator {
              * @return The configured [$simpleName].
              */
             fun Container.$functionName(init: $simpleName.() -> Unit = {}): $simpleName {
-                val component = $simpleName()
+                val factory = this.getFactoryForComponent(${simpleName}::class.java)
+                val component = if (factory == null) $simpleName() else factory()
                 component.init()
                 if (this.isAutoAddEnabled()) {
                     this.add(component as Component)
