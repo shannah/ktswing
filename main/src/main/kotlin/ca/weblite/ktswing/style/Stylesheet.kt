@@ -2,11 +2,14 @@ package ca.weblite.ktswing.style
 
 import java.awt.Component
 import java.awt.Container
+import java.util.WeakHashMap
 import javax.swing.*
 
 class Stylesheet {
 
     private val styles = mutableListOf<Style<out Component>>()
+
+    private val appliedComponents: WeakHashMap<Component,Boolean> = WeakHashMap()
 
     constructor(init: Stylesheet.() -> Unit = {}) {
         apply(init)
@@ -58,12 +61,11 @@ class Stylesheet {
         styles.remove(style)
     }
 
-    fun apply(root: Component) {
-        if (root is Container) {
-            for (i in 0 until root.componentCount) {
-                apply(root.getComponent(i))
-            }
+    fun apply(root: Component, isRoot: Boolean = true) {
+        if (isRoot) {
+            appliedComponents.put(root, true)
         }
+
         for (style in styles) {
             if (
                     style.getTargetClass().isAssignableFrom(root.javaClass) &&
@@ -72,6 +74,21 @@ class Stylesheet {
                 @Suppress("UNCHECKED_CAST")
                 (style as Style<Component>).apply(root)
             }
+        }
+
+        if (root is Container) {
+            for (i in 0 until root.componentCount) {
+                apply(root.getComponent(i), false)
+            }
+        }
+    }
+
+    fun revalidate(component: Component) {
+        if (appliedComponents.containsKey(component)) {
+            apply(component)
+        }
+        if (component.parent != null) {
+            revalidate(component.parent)
         }
     }
 
