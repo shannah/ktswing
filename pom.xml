@@ -65,6 +65,7 @@
         <module>codegen</module>
         <module>main</module>
         <module>jgoodies</module>
+        <module>swingx</module>
     </modules>
 
     <profiles>

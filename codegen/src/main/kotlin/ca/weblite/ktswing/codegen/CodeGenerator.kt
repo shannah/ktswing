@@ -67,6 +67,7 @@ object CodeGenerator {
             ?: File("target/generated-sources/kotlin")
         outputDir.mkdirs()
 
+
         // 2) Load each class by name, filter out abstract or non-public classes
         val loadedComponents = KNOWN_SWING_CLASSES.mapNotNull { className ->
             try {
