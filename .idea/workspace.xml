@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,38 +39,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Kotlin.HelloKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.SampleKt.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.codegen [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.codegen [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ktswing [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ktswing-root [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ktswing-root [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ktswing-root [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.main [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.main [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [help:effective-pom].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.root [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/ktswing&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.HelloKt.executor": "Run",
+    "Kotlin.SampleKt.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.codegen [compile].executor": "Run",
+    "Maven.codegen [install].executor": "Run",
+    "Maven.ktswing [compile].executor": "Run",
+    "Maven.ktswing-root [clean].executor": "Run",
+    "Maven.ktswing-root [install].executor": "Run",
+    "Maven.ktswing-root [verify].executor": "Run",
+    "Maven.ktswing-swingx [install].executor": "Run",
+    "Maven.main [clean].executor": "Run",
+    "Maven.main [compile].executor": "Run",
+    "Maven.root [clean].executor": "Run",
+    "Maven.root [compile].executor": "Run",
+    "Maven.root [help:effective-pom].executor": "Run",
+    "Maven.root [install].executor": "Run",
+    "Maven.root [package].executor": "Run",
+    "Maven.root [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "azul-21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/steve/ktswing",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steve\ktswing" />
