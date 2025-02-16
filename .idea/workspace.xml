@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codegen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +24,7 @@
         <option value="Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -35,43 +34,48 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2s8xH2JQkkfpV6rjPy4tppzc1JF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.HelloKt.executor": "Run",
-    "Kotlin.SampleKt.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.codegen [compile].executor": "Run",
-    "Maven.codegen [install].executor": "Run",
-    "Maven.ktswing [compile].executor": "Run",
-    "Maven.ktswing-root [clean].executor": "Run",
-    "Maven.ktswing-root [install].executor": "Run",
-    "Maven.main [clean].executor": "Run",
-    "Maven.main [compile].executor": "Run",
-    "Maven.root [clean].executor": "Run",
-    "Maven.root [compile].executor": "Run",
-    "Maven.root [help:effective-pom].executor": "Run",
-    "Maven.root [install].executor": "Run",
-    "Maven.root [package].executor": "Run",
-    "Maven.root [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "azul-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/steve/ktswing",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.HelloKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.SampleKt.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.codegen [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.codegen [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ktswing [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ktswing-root [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ktswing-root [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ktswing-root [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.main [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [help:effective-pom].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/steve/ktswing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steve\ktswing" />
@@ -82,6 +86,7 @@
       <recent name="C:\Users\steve\ktswing\codegen" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ca.weblite.ktswing.style" />
       <recent name="ca.weblite.ktswing.jgoodies" />
     </key>
   </component>
@@ -89,6 +94,21 @@
     <option name="myCommands">
       <command value="mvn help:effective-pom" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ktswing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ktswing" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -107,5 +127,21 @@
       <updated>1737850914752</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt</url>
+          <line>76</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt</url>
+          <line>59</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,8 @@
 package ca.weblite.ktswing.jgoodies
 
 import ca.weblite.ktswing.AutoAddDisabled
+import ca.weblite.ktswing.extensions.isAutoAddEnabled
+import com.jgoodies.forms.factories.DefaultComponentFactory
 import com.jgoodies.forms.layout.CellConstraints
 import com.jgoodies.forms.layout.FormLayout
 import com.jgoodies.forms.layout.RowSpec
@@ -28,6 +30,12 @@ class Form(cols: String, rows: String = "") : JPanel(FormLayout(cols, rows)), Au
         currentRow = (layout as FormLayout).rowCount
         init()
 
+    }
+
+    fun separator(title: String, init: JComponent.() -> Unit): JComponent {
+        val separator = DefaultComponentFactory.getInstance().createSeparator(title)
+        separator.init()
+        return separator
     }
 
     infix fun JComponent.at(pos: CellConstraints): JComponent {

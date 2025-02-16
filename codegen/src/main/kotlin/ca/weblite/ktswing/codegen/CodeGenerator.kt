@@ -24,6 +24,7 @@ object CodeGenerator {
     private val KNOWN_SWING_CLASSES = listOf(
         "javax.swing.JButton",
         "javax.swing.JCheckBox",
+        "javax.swing.JRadioButton",
         "javax.swing.JComboBox",
         "javax.swing.JDesktopPane",
         "javax.swing.JDialog",
