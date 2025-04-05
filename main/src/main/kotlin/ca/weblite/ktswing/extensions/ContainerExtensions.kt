@@ -2,9 +2,8 @@ package ca.weblite.ktswing.extensions
 
 import ca.weblite.ktswing.AutoAddDisabled
 import ca.weblite.ktswing.BorderPane
-import java.awt.Component
+import java.awt.*
 import javax.swing.JSplitPane
-import java.awt.Container
 import java.util.WeakHashMap
 import javax.swing.JComponent
 
@@ -21,17 +20,37 @@ private val containerFactoryMap =
 val Container.factory: MutableMap<Class<out Component>, () -> Component>
     get() = containerFactoryMap.getOrPut(this) { mutableMapOf() }
 
+infix fun JComponent.at(pos: Any): JComponent {
+    val container = this.getClientProperty("ktswing.Container") as? Container
+    container?.add(this, pos)
+    return this
+}
+
 /**
  * Extension function to determine if automatic addition of components is enabled for a Container.
  *
  * @return `true` if components should be automatically added, `false` otherwise.
  */
 fun Container.isAutoAddEnabled(): Boolean {
+    if (layoutRequiresParameters(layout)) {
+        return false
+    }
     return when (this) {
         is JSplitPane -> false
         is AutoAddDisabled -> false
+
         // Add other specialized containers here as needed
         else -> true
+    }
+}
+
+fun layoutRequiresParameters(layout: LayoutManager): Boolean {
+    return when (layout) {
+        is BorderLayout -> true
+        is CardLayout -> true
+        is GridBagLayout -> true
+        // Add other specialized layouts here as needed
+        else -> false
     }
 }
 

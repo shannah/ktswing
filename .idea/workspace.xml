@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -41,14 +42,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Kotlin.BorderLayoutSampleKt.executor": "Run",
     "Kotlin.HelloKt.executor": "Run",
     "Kotlin.SampleKt.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.codegen [compile].executor": "Run",
     "Maven.codegen [install].executor": "Run",
     "Maven.ktswing [compile].executor": "Run",
+    "Maven.ktswing-main [package].executor": "Run",
     "Maven.ktswing-root [clean].executor": "Run",
     "Maven.ktswing-root [install].executor": "Run",
+    "Maven.ktswing-root [package].executor": "Run",
     "Maven.ktswing-root [verify].executor": "Run",
     "Maven.ktswing-swingx [install].executor": "Run",
     "Maven.main [clean].executor": "Run",
@@ -61,6 +65,7 @@
     "Maven.root [verify].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -92,6 +97,13 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="BorderLayoutSampleKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.weblite.ktswing.forms.BorderLayoutSampleKt" />
+      <module name="ktswing-main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ktswing" />
       <method v="2">
@@ -105,13 +117,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-azul-21.0.2-4caba194b151-38275579" />
-      </set>
-    </attachedChunks>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.BorderLayoutSampleKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

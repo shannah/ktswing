@@ -173,9 +173,14 @@ object CodeGenerator {
             fun Container.$functionName(init: $simpleName.() -> Unit = {}): $simpleName {
                 val factory = this.getFactoryForComponent(${simpleName}::class.java)
                 val component = if (factory == null) $simpleName() else factory()
+                
                 component.init()
                 if (this.isAutoAddEnabled()) {
                     this.add(component as Component)
+                } else {
+                    if (component is JComponent) {
+                        component.putClientProperty("ktswing.Container", this);
+                    }
                 }
                 return component
             }
