@@ -26,6 +26,24 @@ infix fun JComponent.at(pos: Any): JComponent {
     return this
 }
 
+inline fun <reified T : Component> Container.createComponent(
+    noinline factory: (() -> T)? = null,
+    init: T.() -> Unit = {}
+): T {
+    val componentFactory = factory ?: getFactoryForComponent(T::class.java)
+    val component: T = (componentFactory?.invoke() ?: T::class.java.getDeclaredConstructor().newInstance())
+
+    component.init()
+
+    if (isAutoAddEnabled()) {
+        add(component)
+    } else if (component is JComponent) {
+        component.putClientProperty("ktswing.Container", this)
+    }
+
+    return component
+}
+
 /**
  * Extension function to determine if automatic addition of components is enabled for a Container.
  *

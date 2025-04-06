@@ -128,6 +128,7 @@ object CodeGenerator {
 
                 import ca.weblite.ktswing.extensions.isAutoAddEnabled
                 import ca.weblite.ktswing.extensions.getFactoryForComponent
+                import ca.weblite.ktswing.extensions.createComponent
                 import javax.swing.*
                 import java.awt.Container
                 import java.awt.Component
@@ -170,20 +171,8 @@ object CodeGenerator {
              * @param init Lambda to configure the [$simpleName].
              * @return The configured [$simpleName].
              */
-            fun Container.$functionName(init: $simpleName.() -> Unit = {}): $simpleName {
-                val factory = this.getFactoryForComponent(${simpleName}::class.java)
-                val component = if (factory == null) $simpleName() else factory()
-                
-                component.init()
-                if (this.isAutoAddEnabled()) {
-                    this.add(component as Component)
-                } else {
-                    if (component is JComponent) {
-                        component.putClientProperty("ktswing.Container", this);
-                    }
-                }
-                return component
-            }
+            fun Container.$functionName(init: $simpleName.() -> Unit = {}): $simpleName =
+                createComponent(factory = null, init = init)
             """.trimIndent()
         } else {
             // Build a type parameter declaration, e.g. "<E>", or "<V : Component>"
