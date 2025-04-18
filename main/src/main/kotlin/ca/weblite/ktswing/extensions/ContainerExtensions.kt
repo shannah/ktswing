@@ -6,6 +6,7 @@ import java.awt.*
 import javax.swing.JSplitPane
 import java.util.WeakHashMap
 import javax.swing.JComponent
+import javax.swing.JScrollPane
 
 private val containerFactoryMap =
     WeakHashMap<Container, MutableMap<Class<out Component>, () -> Component>>()
@@ -39,6 +40,9 @@ inline fun <reified T : Component> Container.createComponent(
         add(component)
     } else if (component is JComponent) {
         component.putClientProperty("ktswing.Container", this)
+        if (this is JScrollPane) {
+            this.setViewportView(component)
+        }
     }
 
     return component
@@ -56,6 +60,7 @@ fun Container.isAutoAddEnabled(): Boolean {
     return when (this) {
         is JSplitPane -> false
         is AutoAddDisabled -> false
+        is JScrollPane -> false
 
         // Add other specialized containers here as needed
         else -> true
