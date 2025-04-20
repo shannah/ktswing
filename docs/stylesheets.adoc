@@ -1,0 +1,301 @@
+= Introduction to Using Stylesheets in KT-Swing
+
+KT-Swing provides a powerful `Stylesheet` class that allows developers to define and apply styles to Swing components in a declarative and reusable way. This approach simplifies UI customization and promotes consistency across your application.
+
+== What is a Stylesheet?
+
+A `Stylesheet` is a collection of styles that can be applied to Swing components. Each style targets a specific component type (e.g., `JButton`, `JLabel`) and can optionally include a selector to match specific components based on attributes like their name, `classList`, or other properties.
+
+== Key Features
+
+- **Declarative Styling**: Define styles using Kotlin's DSL syntax.
+- **Component Matching**: Use selectors to target specific components.
+- **Recursive Application**: Styles are applied to components and their children.
+- **Chaining**: Combine multiple styles for complex UI hierarchies.
+
+== Selectors
+
+Selectors in KT-Swing are inspired by CSS selectors and allow you to target components based on their attributes. Below are some common types of selectors:
+
+=== ID Selector
+
+The ID selector matches components by their `name` property. For example:
+
+[source,kotlin]
+----
+val stylesheet = Stylesheet().apply {
+    button("#myButton") {
+        background = java.awt.Color.RED
+    }
+}
+----
+
+This applies the style to a `JButton` with the `name` property set to `"myButton"`.
+
+=== Class Selector
+
+The class selector matches components by their `classList`, which is a list of strings similar to CSS classes. For example:
+
+[source,kotlin]
+----
+val stylesheet = Stylesheet().apply {
+    panel(".super-panel") {
+        border = javax.swing.BorderFactory.createLineBorder(java.awt.Color.RED)
+    }
+}
+----
+
+This applies the style to all `JPanel` components that have `"super-panel"` in their `classList`.
+
+To add a class to a component, use the `classList` property:
+
+[source,kotlin]
+----
+val panel = JPanel().apply {
+    classList.add("super-panel")
+}
+----
+
+=== Hierarchy Selector
+
+Hierarchy selectors allow you to target child components of a specific parent. For example:
+
+[source,kotlin]
+----
+val stylesheet = Stylesheet().apply {
+    label(".super-panel > *") {
+        font = font.deriveFont(30f)
+    }
+}
+----
+
+This applies the style to all child components of a `JPanel` with `"super-panel"` in its `classList`.
+
+The `>` operator specifies direct children, while omitting it targets all descendants. For example:
+
+- `.super-panel > *`: Targets direct children of components with `"super-panel"` in their `classList`.
+- `.super-panel *`: Targets all descendants of components with `"super-panel"` in their `classList`.
+
+=== Combining Selectors
+
+You can combine selectors for more specific targeting. For example:
+
+[source,kotlin]
+----
+val stylesheet = Stylesheet().apply {
+    button(".super-panel > .green") {
+        foreground = java.awt.Color.GREEN
+    }
+}
+----
+
+This applies the style to `JButton` components with `"green"` in their `classList` that are direct children of a component with `"super-panel"` in its `classList`.
+
+== Basic Usage
+
+To use a `Stylesheet`, you first create an instance of the class, define styles using its DSL, and then apply the stylesheet to your component tree.
+
+Here is an example:
+
+[source,kotlin]
+----
+import ca.weblite.ktswing.style.Stylesheet
+import javax.swing.JButton
+import javax.swing.JPanel
+
+fun main() {
+    val stylesheet = Stylesheet().apply {
+        button {
+            font = font.deriveFont(20f)
+            putClientProperty("styled", true)
+        }
+        panel(".super-panel") {
+            border = javax.swing.BorderFactory.createTitledBorder("Styled Panel")
+        }
+        label(".super-panel > *") {
+            font = font.deriveFont(30f)
+        }
+    }
+
+    val panel = JPanel().apply {
+        classList.add("super-panel")
+    }
+    val button = JButton("Click Me")
+    panel.add(button)
+
+    stylesheet.apply(panel)
+
+    // The button and panel will now have the applied styles
+}
+----
+
+### Convenience Methods for Registering Component Types
+
+The `Stylesheet` class provides a variety of convenience methods for registering styles for common Swing components. These methods are thin wrappers around the `register` method, simplifying the process of targeting specific component types. Below is a list of the available methods:
+
+- `button` - Targets `JButton` components.
+- `label` - Targets `JLabel` components.
+- `panel` - Targets `JPanel` components.
+- `textField` - Targets `JTextField` components.
+- `textArea` - Targets `JTextArea` components.
+- `comboBox` - Targets `JComboBox` components.
+- `checkBox` - Targets `JCheckBox` components.
+- `radioButton` - Targets `JRadioButton` components.
+- `slider` - Targets `JSlider` components.
+- `spinner` - Targets `JSpinner` components.
+- `progressBar` - Targets `JProgressBar` components.
+- `scrollPane` - Targets `JScrollPane` components.
+- `table` - Targets `JTable` components.
+- `tree` - Targets `JTree` components.
+- `tabbedPane` - Targets `JTabbedPane` components.
+- `menuBar` - Targets `JMenuBar` components.
+- `menuItem` - Targets `JMenuItem` components.
+- `menu` - Targets `JMenu` components.
+- `popupMenu` - Targets `JPopupMenu` components.
+- `toolBar` - Targets `JToolBar` components.
+- `toolTip` - Targets `JToolTip` components.
+- `dialog` - Targets `JDialog` components.
+- `frame` - Targets `JFrame` components.
+- `internalFrame` - Targets `JInternalFrame` components.
+- `desktopPane` - Targets `JDesktopPane` components.
+- `layeredPane` - Targets `JLayeredPane` components.
+- `splitPane` - Targets `JSplitPane` components.
+- `scrollBar` - Targets `JScrollBar` components.
+- `viewport` - Targets `JViewport` components.
+- `rootPane` - Targets `JRootPane` components.
+- `contentPane` - Targets `JPanel` components (used as content panes).
+- `glassPane` - Targets `JPanel` components (used as glass panes).
+- `textPane` - Targets `JTextPane` components.
+- `editorPane` - Targets `JEditorPane` components.
+- `textComponent` - Targets `JTextComponent` components.
+- `borderPane` - Targets `BorderPane` components (custom component).
+- `list` - Targets `JList` components.
+
+These methods are equivalent to calling the `register` method directly. For example:
+
+```kotlin
+button(".my-button") {
+    font = font.deriveFont(20f)
+}
+```
+
+is equivalent to:
+
+```kotlin
+register(".my-button", JButton::class.java) {
+    font = font.deriveFont(20f)
+}
+```
+
+### SwingX Extensions for the Stylesheet Class
+
+If you are using SwingX components, the `Stylesheet` class includes extensions to target these components. Below is a list of the available SwingX-specific methods:
+
+- `searchField` - Targets `JXSearchField` components.
+- `imagePanel` - Targets `JXImagePanel` components.
+
+These methods work similarly to the standard convenience methods, allowing you to define styles for SwingX components.
+
+### Targeting Components Without Convenience Methods
+
+For components that do not have predefined convenience methods, you can use the `register` method to define styles. This method allows you to specify the component type and an optional selector string. Here's an example:
+
+```kotlin
+val stylesheet = Stylesheet().apply {
+    register("custom-selector", MyCustomComponent::class.java) {
+        background = java.awt.Color.BLUE
+    }
+}
+```
+
+In this example, `MyCustomComponent` is a custom Swing component, and the style is applied to components matching the `"custom-selector"`.
+
+If no selector is needed, you can omit it:
+
+```kotlin
+val stylesheet = Stylesheet().apply {
+    register(MyCustomComponent::class.java) {
+        background = java.awt.Color.GREEN
+    }
+}
+```
+
+### Adding Your Own Extensions for Custom Classes
+
+You can extend the `Stylesheet` class to add convenience methods for your own custom components. This is done by creating an extension function. Here's an example:
+
+```kotlin
+fun Stylesheet.myCustomComponent(selector: String, apply: MyCustomComponent.() -> Unit): Style<MyCustomComponent> =
+    register(selector, MyCustomComponent::class.java, apply)
+
+fun Stylesheet.myCustomComponent(apply: MyCustomComponent.() -> Unit): Style<MyCustomComponent> =
+    register(MyCustomComponent::class.java, apply)
+```
+
+With these extensions, you can now use `myCustomComponent` in your stylesheets just like the built-in methods:
+
+```kotlin
+val stylesheet = Stylesheet().apply {
+    myCustomComponent {
+        background = java.awt.Color.GREEN
+    }
+}
+```
+
+This approach allows you to seamlessly integrate your custom components into the `Stylesheet` DSL.
+
+### Stylesheet Lifecycle and Revalidation
+
+The lifecycle of a `Stylesheet` involves two main operations: **initial application** and **revalidation**. Understanding these operations is crucial for effectively managing styles in your application.
+
+#### Initial Application
+
+When a `Stylesheet` is applied to a container using `stylesheet.apply(container)`, the styles are recursively applied to the container and all its descendants. This operation is typically performed once, during the initialization of the UI, to ensure that all components are styled according to the defined rules.
+
+#### Revalidation
+
+After the initial application, the `Stylesheet` does not automatically reapply styles when components are modified. To reapply styles, you must explicitly call `stylesheet.revalidate(component)`. This method triggers a revalidation of the stylesheet on the specified component and its ancestors, up to the container where the stylesheet was originally applied.
+
+Revalidation is useful when an event modifies a component in a way that affects style processing, such as adding or removing a class from the `classList`.
+
+#### Example: Adding a Hover Effect
+
+The following example demonstrates how to use revalidation to implement a hover effect. When the mouse enters a button, a `hover` class is added to its `classList`, and the stylesheet is revalidated. When the mouse exits, the `hover` class is removed, and the stylesheet is revalidated again.
+
+```kotlin
+val stylesheet = Stylesheet() {
+    panel("#center") {} chain button {
+        alignmentX = 0.5f
+        border = BorderFactory.createEmptyBorder(5, 10, 5, 10)
+        background = Color(0, 0, 0, 0)
+        cursor = java.awt.Cursor(java.awt.Cursor.HAND_CURSOR)
+
+        // Add hover effect
+        onMouseEntered(this@Stylesheet) {
+            classList.add("hover")
+            this@Stylesheet.revalidate(this)
+        }
+
+        onMouseExited(this@Stylesheet) {
+            classList.remove("hover")
+            this@Stylesheet.revalidate(this)
+        }
+    }
+
+    // Define hover style
+    button(".hover") {
+        background = Color(0, 0, 0, 10)
+    }
+
+    // Example of platform-specific styling
+    splitPane {
+        if (Platform.getSystemPlatform().isMac()) {
+            border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
+        }
+    }
+}
+```
+
+#### Notes on Event Listeners
+
+In the example above, the `onMouseEntered` and `onMouseExited` methods are extension functions defined in `ComponentExtensions`. By providing the `this@Stylesheet` ID, you ensure that listeners are not accumulated each time the stylesheet is revalidated. This prevents potential memory leaks or redundant event handling, which could occur if you directly used `addMouseListener(...)`.
