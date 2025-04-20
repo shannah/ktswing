@@ -78,6 +78,20 @@ val panel = JPanel().apply {
 
 This is a subtle change, but it results in much cleaner code, that is easier to read and maintain.
 
+==== Specifying Layout Constraints
+
+Some layout managers, such as BorderLayout, require a layout constraint when you add a component to the container that it manages.  In such cases you can use the `at` keyword, followed by the constraint.
+
+E.g. The following example adds a button to the "north" slot of a panel managed by BorderLayout:
+
+```kotlin
+val panel = JPanel(BorderLayout()).apply {
+    button {
+        text = "Click Me"
+    } at BorderLayout.NORTH
+}
+```
+
 ==== Swing Core Components
 
 The `swinky-main` module provides extension functions for the following core swing components:
@@ -154,6 +168,30 @@ SwingX is a fantastic set of libraries that was originally developed by Sun Micr
 | `jxTable` | `org.jdesktop.swingx.JXTable`
 |===
 
+==== Adding Support for Other Components
+
+To add support for other components, just follow the patterns used for the existing components. For example, you can add an extension named `tmeplateList` for a component of type `TemplateList` like this:
+
+```kotlin
+import ca.weblite.swinky.extensions.createComponent
+
+fun Container.templateList(model: ProjectTemplates, init: TemplateList.() -> Unit = {}): TemplateList =
+    createComponent(factory = { TemplateList(model) }, init = init)
+```
+
+Now you'll be able to add instances of `TemplateList` to your UIs with:
+
+```kotlin
+templateList(model) { ... }
+```
+
+instead of:
+
+```kotlin
+val templateList = TemplateList(model)
+add(templateList)
+```
+
 === JGoodies Forms Support
 
 The `Form` class in the `jgoodies-forms` module provides a Kotlin-friendly DSL for creating layouts using the JGoodies Forms framework. It simplifies the process of defining rows, columns, and constraints, making it easier to build complex, responsive UIs.
@@ -218,20 +256,6 @@ border = BorderFactory.createEmptyBorder(5, 5, 5, 5)
 * **`x(col: Int)`**: Positions a component in the specified column of the current row.
 * **`xw(col: Int, colSpan: Int)`**: Positions a component in the specified column and spans multiple columns.
 * **`at(pos: CellConstraints)`**: Adds a component to the form at the specified position.
-
-=== Specifying Layout Constraints
-
-Some layout managers, such as BorderLayout, require a layout constraint when you add a component to the container that it manages.  In such cases you can use the `at` keyword, followed by the constraint.
-
-E.g. The following example adds a button to the "north" slot of a panel managed by BorderLayout:
-
-```kotlin
-val panel = JPanel(BorderLayout()).apply {
-    button {
-        text = "Click Me"
-    } at BorderLayout.NORTH
-}
-```
 
 === Component Extensions
 
