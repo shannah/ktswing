@@ -1,0 +1,294 @@
+= Swingky: Kotlin Extensions for Swing
+
+image::https://img.shields.io/maven-central/v/ca.weblite/swinky-main.svg?label=Maven%20Central[Maven Central]
+
+== Overview
+
+Swinky is a kotlin library that enhances the developer experience for Swing applications.
+
+== Features
+
+. **Kotlin DSL**: Swinky provides a Kotlin DSL for building Swing UIs, making it easier to create and manage UI components.
+. **Stylesheets**: Swinky allows you to define stylesheets for your Swing components, enabling a more modern and flexible approach to UI design.
+. **Coroutines**: Swinky provides a SwingDispather to allow you to use Swing with Kotlin coroutines, making it easier to write asynchronous code in your Swing applications.
+. **Extensible**: Swinky is designed to be extensible, allowing you to create your own components and styles if needed.
+
+== Installation
+
+=== Maven
+
+Add the following dependency to your Maven `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>ca.weblite</groupId>
+    <artifactId>swinky-main</artifactId>
+    <version>${swinky.version}</version>
+</dependency>
+```
+
+=== Gradle
+
+Add the following dependency to your Gradle `build.gradle` file:
+
+```groovy
+dependencies {
+    implementation "ca.weblite:swinky-main:${swinky.version}"
+}
+```
+
+
+== Usage
+
+=== Container Extensions
+
+Swinky provides a set of extensions for `java.awt.Container` to facility the creation of Swing UIs using a DSL style syntax.
+
+Instead of
+
+```kotlin
+val panel = JPanel();
+val textField = JTextField();
+textField.setText("Hello World");
+panel.add(textField);
+val label = JLabel();
+label.setText("Hello World");
+panel.add(label);
+val button = JButton();
+button.setText("Click Me");
+panel.add(button);
+```
+
+You can use the following DSL syntax:
+
+```kotlin
+val panel = JPanel().apply {
+    textField {
+        text = "Hello World"
+    }
+    label {
+        text = "Hello World"
+    }
+    button {
+        text = "Click Me"
+    }
+}
+```
+
+
+This is a subtle change, but it results in much cleaner code, that is easier to read and maintain.
+
+==== Swing Core Components
+
+The `swinky-main` module provides extension functions for the following core swing components:
+
+[cols="1,1", options="header"]
+|===
+| Extension Name | Swing Core Component Class
+
+| `button` | `javax.swing.JButton`
+| `checkBox` | `javax.swing.JCheckBox`
+| `comboBox` | `javax.swing.JComboBox`
+| `desktopPane` | `javax.swing.JDesktopPane`
+| `dialog` | `javax.swing.JDialog`
+| `editorPane` | `javax.swing.JEditorPane`
+| `frame` | `javax.swing.JFrame`
+| `internalFrame` | `javax.swing.JInternalFrame`
+| `label` | `javax.swing.JLabel`
+| `layer` | `javax.swing.JLayer`
+| `list` | `javax.swing.JList`
+| `menuBar` | `javax.swing.JMenuBar`
+| `optionPane` | `javax.swing.JOptionPane`
+| `panel` | `javax.swing.JPanel`
+| `passwordField` | `javax.swing.JPasswordField`
+| `popupMenu` | `javax.swing.JPopupMenu`
+| `progressBar` | `javax.swing.JProgressBar`
+| `radioButton` | `javax.swing.JRadioButton`
+| `rootPane` | `javax.swing.JRootPane`
+| `scrollBar` | `javax.swing.JScrollBar`
+| `scrollPane` | `javax.swing.JScrollPane`
+| `separator` | `javax.swing.JSeparator`
+| `slider` | `javax.swing.JSlider`
+| `spinner` | `javax.swing.JSpinner`
+| `splitPane` | `javax.swing.JSplitPane`
+| `tabbedPane` | `javax.swing.JTabbedPane`
+| `table` | `javax.swing.JTable`
+| `textArea` | `javax.swing.JTextArea`
+| `textField` | `javax.swing.JTextField`
+| `textPane` | `javax.swing.JTextPane`
+| `toggleButton` | `javax.swing.JToggleButton`
+| `toolBar` | `javax.swing.JToolBar`
+| `toolTip` | `javax.swing.JToolTip`
+| `tree` | `javax.swing.JTree`
+| `viewport` | `javax.swing.JViewport`
+| `window` | `javax.swing.JWindow`
+|===
+
+==== SwingX Components
+
+SwingX is a fantastic set of libraries that was originally developed by Sun Microsystems, and is now maintained by the community.  The `swinky-swingx` module provides extensions for the following SwingX components:
+
+[cols="1,1", options="header"]
+|===
+| Extension Name | SwingX Component Class
+
+| `searchField` | `org.jdesktop.swingx.JXSearchField`
+| `imagePanel` | `org.jdesktop.swingx.JXImagePanel`
+| `jxLabel` | `org.jdesktop.swingx.JXLabel`
+| `busyLabel` | `org.jdesktop.swingx.JXBusyLabel`
+| `jxButton` | `org.jdesktop.swingx.JXButton`
+| `jxTextField` | `org.jdesktop.swingx.JXTextField`
+| `jxTextArea` | `org.jdesktop.swingx.JXTextArea`
+| `jxTaskPane` | `org.jdesktop.swingx.JXTaskPane`
+| `jxTaskPaneContainer` | `org.jdesktop.swingx.JXTaskPaneContainer`
+| `jxCollapsiblePane` | `org.jdesktop.swingx.JXCollapsiblePane`
+| `jxPanel` | `org.jdesktop.swingx.JXPanel`
+| `jxHyperlink` | `org.jdesktop.swingx.JXHyperlink`
+| `jxDatePicker` | `org.jdesktop.swingx.JXDatePicker`
+| `jxMonthView` | `org.jdesktop.swingx.JXMonthView`
+| `jxHeader` | `org.jdesktop.swingx.JXHeader`
+| `jxStatusBar` | `org.jdesktop.swingx.JXStatusBar`
+| `jxTipOfTheDay` | `org.jdesktop.swingx.JXTipOfTheDay`
+| `jxList` | `org.jdesktop.swingx.JXList`
+| `jxTreeTable` | `org.jdesktop.swingx.JXTreeTable`
+| `jxTable` | `org.jdesktop.swingx.JXTable`
+|===
+
+=== JGoodies Forms Support
+
+The `Form` class in the `jgoodies-forms` module provides a Kotlin-friendly DSL for creating layouts using the JGoodies Forms framework. It simplifies the process of defining rows, columns, and constraints, making it easier to build complex, responsive UIs.
+
+==== Features of the `Form` Class
+
+* **DSL Syntax**: Use a clean, Kotlin-based syntax to define rows, columns, and components.
+* **Cell Constraints**: Easily position components using methods like `x`, `xw`, and `at`.
+* **Row Management**: Automatically append rows with spacing (`3dlu`) and preferred size (`p`).
+* **Custom Separators**: Add titled separators with the `separator` method.
+
+==== Basic Usage Example
+
+The following example demonstrates how to use the `Form` class to create a simple form layout:
+
+```kotlin
+import ca.weblite.swinky.jgoodies.Form
+import ca.weblite.swinky.label
+import ca.weblite.swinky.textField
+import javax.swing.BorderFactory
+import javax.swing.JFrame
+import javax.swing.SwingUtilities
+
+fun main() {
+SwingUtilities.invokeLater {
+val frame = JFrame("Example Form").apply {
+form("p, 3dlu, p") {
+border = BorderFactory.createEmptyBorder(5, 5, 5, 5)
+
+                // First row
+                row {
+                    label {
+                        text = "First Name"
+                    } at x(1)
+
+                    textField {
+                        columns = 20
+                    } at x(3)
+                }
+
+                // Second row
+                row {
+                    label {
+                        text = "Last Name"
+                    } at x(1)
+
+                    textField {
+                        columns = 20
+                    } at x(3)
+                }
+            }
+            pack()
+            isVisible = true
+        }
+    }
+}
+```
+
+==== Key Methods
+
+* **`row { ... }`**: Adds a new row to the form.
+* **`x(col: Int)`**: Positions a component in the specified column of the current row.
+* **`xw(col: Int, colSpan: Int)`**: Positions a component in the specified column and spans multiple columns.
+* **`at(pos: CellConstraints)`**: Adds a component to the form at the specified position.
+
+=== Specifying Layout Constraints
+
+Some layout managers, such as BorderLayout, require a layout constraint when you add a component to the container that it manages.  In such cases you can use the `at` keyword, followed by the constraint.
+
+E.g. The following example adds a button to the "north" slot of a panel managed by BorderLayout:
+
+```kotlin
+val panel = JPanel(BorderLayout()).apply {
+    button {
+        text = "Click Me"
+    } at BorderLayout.NORTH
+}
+```
+
+=== Component Extensions
+
+Swinky also provides a set of extensions for `java.awt.Component`, to simplify such things as adding mouse event listeners, and adding style classes (for use in Stylesheets).
+
+[cols="1,2", options="header"]
+|===
+| Extension Name | Description
+
+| `classList` | Provides a mutable set of CSS-like style classes for a `JComponent`, allowing dynamic styling.
+| `onMouseEntered` | Adds a mouse listener for the "mouse entered" event.
+| `onMouseExited` | Adds a mouse listener for the "mouse exited" event.
+| `onMousePressed` | Adds a mouse listener for the "mouse pressed" event.
+| `onMouseReleased` | Adds a mouse listener for the "mouse released" event.
+| `onMouseClicked` | Adds a mouse listener for the "mouse clicked" event.
+|===
+
+The `onMouseXXX` extensions provide one piece of important functionality that is not available in the standard Swing API.  That support an optional "id" parameter so that if you add an event listener later with the same ID, it will replace the listener, instead of adding it as an additional listener.  This is very handy when applying events inside a Stylesheet rule, because the stylesheet may be re-validated several times, and you don't want to add the same event listener multiple times.  The `id` parameter allows you to specify a unique ID for the event listener, and if you add another event listener with the same ID, it will replace the previous one.
+
+The following is a short example of a stylesheet that makes use of the `onMouseEntered` and `onMouseExited` extensions to create a hover effect for buttons.  Notice how the `Stylesheet` object is passed as the first argument.  This causes the Stylesheet object to be treated as an ID, so that when the stylesheet is re-validated, the event listeners are replaced instead of added again.  This is important because the stylesheet may be re-validated several times, and you don't want to add the same event listener multiple times.
+
+```kotlin
+val stylesheet = Stylesheet() {
+    panel("#center"){} chain button {
+        alignmentX = 0.5f
+        border = BorderFactory.createEmptyBorder(5, 10, 5, 10)
+        background = Color(0,0,0,0)
+        cursor = java.awt.Cursor(java.awt.Cursor.HAND_CURSOR)
+        onMouseEntered(this@Stylesheet) {
+            classList.add("hover")
+            this@Stylesheet.revalidate(this)
+        }
+
+        onMouseExited(this@Stylesheet) {
+            classList.remove("hover")
+            this@Stylesheet.revalidate(this)
+        }
+    }
+
+    button(".hover") {
+        background = Color(0,0,0,10)
+    }
+
+    splitPane {
+        if (Platform.getSystemPlatform().isMac()) {
+            border = BorderFactory.createEmptyBorder(0,0,0,0)
+        }
+    }
+}
+```
+
+=== Stylesheets
+
+Stylesheets allow you to apply decorators to sets of components using a CSS-like syntax.  The stylesheets are applied to the components using the `Stylesheet` class, which is a subclass of `JComponent`.  The stylesheets are re-applied to the components whenever the stylesheet is re-validated, so you can change the styles dynamically.
+
+See link:docs/stylesheets.adoc[Stylesheets] for more information on how to use stylesheets.
+
+=== Coroutines
+
+Swinky provides a `SwingDispatcher` that allows you to use Swing with Kotlin coroutines.  This allows you to write asynchronous code in your Swing applications, without having to worry about threading issues.

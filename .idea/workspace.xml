@@ -5,41 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codegen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coroutines/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcher.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingExecutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingExecutor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coroutines/src/test/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcherTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/test/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcherTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/stylesheets.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/docs/stylesheets.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jgoodies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/FormBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/FormBuilders.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Sample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Sample.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/AutoAddDisabled.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/AutoAddDisabled.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPaneBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPaneBuilders.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ComponentExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ComponentExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/AbstractStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/AbstractStyle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/ChainableStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/ChainableStyle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Selector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Selector.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Style.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Style.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Stylesheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Stylesheet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/org/example/Hello.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/org/example/Hello.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/BorderLayoutSample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/BorderLayoutSample.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/ScrollPaneSample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/ScrollPaneSample.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/CssSelectorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/CssSelectorTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/StylesheetTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/StylesheetTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swingx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxStylesheetExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxStylesheetExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.adoc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,18 +67,21 @@
     "Maven.root [install].executor": "Run",
     "Maven.root [package].executor": "Run",
     "Maven.root [verify].executor": "Run",
+    "Maven.swinky-root [clean].executor": "Run",
+    "Maven.swinky-root [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "chore/change-name-swinky",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "azul-21",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/shannah/projects/ktswing/main/src/test/kotlin/ca/weblite/ktswing/forms",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
   <component name="RecentsManager">
