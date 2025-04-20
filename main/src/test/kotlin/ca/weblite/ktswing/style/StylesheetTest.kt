@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.style
+package ca.weblite.swinky.style
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test

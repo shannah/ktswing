@@ -5,10 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7846adae-b846-4ab8-a0c5-55effaeff455" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codegen/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/codegen/src/main/kotlin/ca/weblite/ktswing/codegen/CodeGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coroutines/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingExecutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/main/kotlin/ca/weblite/ktswing/coroutines/SwingExecutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coroutines/src/test/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcherTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/coroutines/src/test/kotlin/ca/weblite/ktswing/coroutines/SwingDispatcherTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/stylesheets.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/docs/stylesheets.adoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jgoodies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Form.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/FormBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/FormBuilders.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Sample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jgoodies/src/main/kotlin/ca/weblite/ktswing/jgoodies/Sample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/AutoAddDisabled.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/AutoAddDisabled.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPane.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPaneBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/BorderPaneBuilders.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ComponentExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ComponentExtensions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/extensions/ContainerExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/AbstractStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/AbstractStyle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/ChainableStyle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/ChainableStyle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/CssSelector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Selector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Selector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Style.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Style.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Stylesheet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/ca/weblite/ktswing/style/Stylesheet.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/kotlin/org/example/Hello.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/kotlin/org/example/Hello.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/BorderLayoutSample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/BorderLayoutSample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/ScrollPaneSample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms/ScrollPaneSample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/CssSelectorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/CssSelectorTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/StylesheetTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/style/StylesheetTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swingx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxBuilders.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxStylesheetExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/swingx/src/main/kotlin/ca/weblite/ktswing/swingx/SwingxStylesheetExtensions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +53,7 @@
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Empty" />
       </list>
     </option>
   </component>
@@ -43,13 +75,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultPlantUmlFileTemplate": "Empty",
     "Kotlin.BorderLayoutSampleKt.executor": "Run",
     "Kotlin.HelloKt.executor": "Run",
     "Kotlin.SampleKt.executor": "Run",
+    "Kotlin.ScrollPaneSampleKt.executor": "Run",
+    "Kotlin.SwingDispatcherTestKt.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.codegen [compile].executor": "Run",
     "Maven.codegen [install].executor": "Run",
     "Maven.ktswing [compile].executor": "Run",
+    "Maven.ktswing-coroutines [install].executor": "Run",
     "Maven.ktswing-main [package].executor": "Run",
     "Maven.ktswing-root [clean].executor": "Run",
     "Maven.ktswing-root [install].executor": "Run",
@@ -68,18 +104,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "chore/change-name-swinky",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "azul-21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/steve/ktswing",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "/Users/shannah/projects/ktswing/main/src/test/kotlin/ca/weblite/ktswing/forms",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/src/test/kotlin/ca/weblite/ktswing/forms" />
       <recent name="C:\Users\steve\ktswing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -88,6 +125,7 @@
       <recent name="C:\Users\steve\ktswing\codegen" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ca.weblite.ktswing.coroutines" />
       <recent name="ca.weblite.ktswing.style" />
       <recent name="ca.weblite.ktswing.jgoodies" />
     </key>
@@ -97,10 +135,24 @@
       <command value="mvn help:effective-pom" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.ScrollPaneSampleKt">
     <configuration name="BorderLayoutSampleKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ca.weblite.ktswing.forms.BorderLayoutSampleKt" />
       <module name="ktswing-main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrollPaneSampleKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.weblite.ktswing.forms.ScrollPaneSampleKt" />
+      <module name="ktswing-main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwingDispatcherTestKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.weblite.ktswing.coroutines.SwingDispatcherTestKt" />
+      <module name="ktswing-coroutines" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,6 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ScrollPaneSampleKt" />
+        <item itemvalue="Kotlin.SwingDispatcherTestKt" />
         <item itemvalue="Kotlin.BorderLayoutSampleKt" />
       </list>
     </recent_temporary>

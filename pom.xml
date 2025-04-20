@@ -7,10 +7,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ca.weblite</groupId>
-    <artifactId>ktswing-root</artifactId>
+    <artifactId>swinky-root</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>ktswing-root</name>
+    <name>swinky-root</name>
 
     <!--
        =========
@@ -21,7 +21,7 @@
        3. <developers>
     -->
     <description>Kotlin DSL for building Swing UIs declaratively.</description>
-    <url>https://github.com/shannah/ktswing</url>
+    <url>https://github.com/shannah/swinky</url>
 
     <properties>
         <!-- We'll set this via environment variable in CI -->
@@ -45,9 +45,9 @@
             For a GitHub-based project, typical example:
             If your repository is public on GitHub:
         -->
-        <connection>scm:git:git://github.com/shannah/ktswing.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:shannah/ktswing.git</developerConnection>
-        <url>https://github.com/shannah/ktswing</url>
+        <connection>scm:git:git://github.com/shannah/swinky.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:shannah/swinky.git</developerConnection>
+        <url>https://github.com/shannah/swinky</url>
         <!-- If you have a tag base, e.g. <tag>HEAD</tag> or <tag>v1.0.0</tag> -->
     </scm>
 

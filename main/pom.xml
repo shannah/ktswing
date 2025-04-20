@@ -7,13 +7,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>ca.weblite</groupId>
-        <artifactId>ktswing-root</artifactId>
+        <artifactId>swinky-root</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ktswing-main</artifactId>
+    <artifactId>swinky-main</artifactId>
     <packaging>jar</packaging>
-    <name>ktswing-main</name>
+    <name>swinky-main</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +30,7 @@
         <!-- *** Depend on the codegen JAR *** -->
         <dependency>
             <groupId>ca.weblite</groupId>
-            <artifactId>ktswing-codegen</artifactId>
+            <artifactId>swinky-codegen</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -66,7 +66,7 @@
                             <!-- Our codegen class was compiled into codegen-1.0-SNAPSHOT.jar,
                                  so the plugin will automatically put it on the classpath
                                  because we declared the codegen dependency above. -->
-                            <mainClass>ca.weblite.ktswing.codegen.CodeGenerator</mainClass>
+                            <mainClass>ca.weblite.swinky.codegen.CodeGenerator</mainClass>
 
                             <!-- Optionally pass an argument for the output directory -->
                             <arguments>

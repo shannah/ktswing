@@ -1,5 +1,5 @@
-package ca.weblite.ktswing.coroutines
-import ca.weblite.ktswing.coroutines.SwingDispatcher
+package ca.weblite.swinky.coroutines
+import ca.weblite.swinky.coroutines.SwingDispatcher
 import kotlinx.coroutines.*
 import javax.swing.*
 import java.awt.BorderLayout

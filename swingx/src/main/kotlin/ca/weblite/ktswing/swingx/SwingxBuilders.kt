@@ -1,6 +1,6 @@
-package ca.weblite.ktswing.swingx
+package ca.weblite.swinky.swingx
 
-import ca.weblite.ktswing.extensions.createComponent
+import ca.weblite.swinky.extensions.createComponent
 import org.jdesktop.swingx.*
 import java.awt.Container
 import java.net.URL

@@ -1,6 +1,6 @@
-package ca.weblite.ktswing
+package ca.weblite.swinky
 
-import ca.weblite.ktswing.extensions.isAutoAddEnabled
+import ca.weblite.swinky.extensions.isAutoAddEnabled
 import java.awt.Container
 
 /**

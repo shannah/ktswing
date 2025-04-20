@@ -1,4 +1,4 @@
-package ca.weblite.ktswing
+package ca.weblite.swinky
 
 interface AutoAddDisabled {
 }

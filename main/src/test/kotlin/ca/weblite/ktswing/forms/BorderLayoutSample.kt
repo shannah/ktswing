@@ -1,7 +1,7 @@
-package ca.weblite.ktswing.forms
+package ca.weblite.swinky.forms
 
-import ca.weblite.ktswing.button
-import ca.weblite.ktswing.extensions.at
+import ca.weblite.swinky.button
+import ca.weblite.swinky.extensions.at
 import java.awt.BorderLayout
 import javax.swing.JFrame
 import javax.swing.SwingUtilities

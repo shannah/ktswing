@@ -1,6 +1,6 @@
-# Kotlin Swing DSL (`ktswing`)
+# Kotlin Swing DSL (`swinky`)
 
-![Maven Central](https://img.shields.io/maven-central/v/ca.weblite/ktswing-main.svg?label=Maven%20Central)
+![Maven Central](https://img.shields.io/maven-central/v/ca.weblite/swinky-main.svg?label=Maven%20Central)
 
 A **Kotlin-based Domain Specific Language (DSL)** for building Swing user interfaces declaratively. Simplify your Swing UI development with intuitive builder functions, automatic component management, and support for complex layouts like BorderLayout and JSplitPane.
 
@@ -30,7 +30,7 @@ A **Kotlin-based Domain Specific Language (DSL)** for building Swing user interf
 
 ## Installation
 
-You can include `ktswing` in your project by adding it as a dependency from Maven Central.
+You can include `swinky` in your project by adding it as a dependency from Maven Central.
 
 ### Maven
 
@@ -38,7 +38,7 @@ You can include `ktswing` in your project by adding it as a dependency from Mave
 <dependencies>
     <dependency>
         <groupId>ca.weblite</groupId>
-        <artifactId>ktswing-main</artifactId>
+        <artifactId>swinky-main</artifactId>
         <version>1.0.0</version>
     </dependency>
 </dependencies>
@@ -70,25 +70,25 @@ repositories {
 }
 
 dependencies {
-    implementation 'ca.weblite:ktswing-main:1.0.0'
+    implementation 'ca.weblite:swinky-main:1.0.0'
 }
 ```
 
 ## Usage
 
-Using `ktswing-main`, you can build Swing UIs declaratively with concise and readable Kotlin code. Below are examples demonstrating how to create simple and complex UIs using the DSL.
+Using `swinky-main`, you can build Swing UIs declaratively with concise and readable Kotlin code. Below are examples demonstrating how to create simple and complex UIs using the DSL.
 
 ### Basic Example
 
 Create a simple `JFrame` with labels, buttons, and text fields.
 
 ```kotlin
-package ca.weblite.ktswing.example
+package ca.weblite.swinky.example
 
-import ca.weblite.ktswing.generated.button
-import ca.weblite.ktswing.generated.label
-import ca.weblite.ktswing.generated.panel
-import ca.weblite.ktswing.generated.textField
+import ca.weblite.swinky.generated.button
+import ca.weblite.swinky.generated.label
+import ca.weblite.swinky.generated.panel
+import ca.weblite.swinky.generated.textField
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
@@ -149,12 +149,12 @@ fun main() {
 Create a `JPanel` with `BorderLayout` using the `borderPane` builder, allowing you to assign components to `north`, `south`, `east`, `west`, and `center` regions.
 
 ```kotlin
-package ca.weblite.ktswing.example
+package ca.weblite.swinky.example
 
-import ca.weblite.ktswing.custom.borderPane
-import ca.weblite.ktswing.generated.button
-import ca.weblite.ktswing.generated.label
-import ca.weblite.ktswing.generated.panel
+import ca.weblite.swinky.custom.borderPane
+import ca.weblite.swinky.generated.button
+import ca.weblite.swinky.generated.label
+import ca.weblite.swinky.generated.panel
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
@@ -219,12 +219,12 @@ fun main() {
 Create a `JSplitPane` using the `splitPane` builder, assigning components to `leftComponent` and `rightComponent` without automatic additions.
 
 ```kotlin
-package ca.weblite.ktswing.example
+package ca.weblite.swinky.example
 
-import ca.weblite.ktswing.custom.splitPane
-import ca.weblite.ktswing.generated.button
-import ca.weblite.ktswing.generated.label
-import ca.weblite.ktswing.generated.panel
+import ca.weblite.swinky.custom.splitPane
+import ca.weblite.swinky.generated.button
+import ca.weblite.swinky.generated.label
+import ca.weblite.swinky.generated.panel
 import javax.swing.JFrame
 import javax.swing.SwingUtilities
 import kotlin.system.exitProcess
@@ -270,7 +270,7 @@ fun main() {
 
 ## Generated Builders
 
-`ktswing-main` auto-generates builder functions for common Swing components. These builders simplify component creation and configuration within containers.
+`swinky-main` auto-generates builder functions for common Swing components. These builders simplify component creation and configuration within containers.
 
 ### Example: `label`
 
@@ -314,14 +314,14 @@ fun <E> Container.comboBox(init: JComboBox<E>.() -> Unit = {}): JComboBox<E> {
 
 ## Extending the DSL
 
-You can easily extend `ktswing-main` with custom builders or additional functionalities as needed. Here's how:
+You can easily extend `swinky-main` with custom builders or additional functionalities as needed. Here's how:
 
 ### Adding Custom Builders
 
 For specialized containers or custom components, implement manual builders or extend existing ones. For example, to add a custom `BorderPane` builder:
 
 ```kotlin
-package ca.weblite.ktswing.custom
+package ca.weblite.swinky.custom
 
 import javax.swing.JSplitPane
 import javax.swing.JComponent
@@ -390,8 +390,8 @@ Contributions are welcome! If you have suggestions, bug reports, or want to cont
 
 2. **Clone Your Fork:**
    ```bash
-   git clone https://github.com/shannah/ktswing.git
-   cd ktswing
+   git clone https://github.com/shannah/swinky.git
+   cd swinky
    ```
 
 3. **Create a New Branch:**

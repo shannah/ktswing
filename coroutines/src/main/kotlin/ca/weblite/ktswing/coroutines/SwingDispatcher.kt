@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.coroutines
+package ca.weblite.swinky.coroutines
 
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.swing.SwingUtilities

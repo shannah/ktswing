@@ -1,8 +1,8 @@
-package ca.weblite.ktswing.jgoodies
+package ca.weblite.swinky.jgoodies
 
-import ca.weblite.ktswing.editorPane
-import ca.weblite.ktswing.label
-import ca.weblite.ktswing.textField
+import ca.weblite.swinky.editorPane
+import ca.weblite.swinky.label
+import ca.weblite.swinky.textField
 import javax.swing.BorderFactory
 import javax.swing.JFrame
 import javax.swing.SwingUtilities

@@ -1,8 +1,8 @@
 package org.example
-import ca.weblite.ktswing.*
-import ca.weblite.ktswing.extensions.classList
-import ca.weblite.ktswing.extensions.factory
-import ca.weblite.ktswing.style.Stylesheet
+import ca.weblite.swinky.*
+import ca.weblite.swinky.extensions.classList
+import ca.weblite.swinky.extensions.factory
+import ca.weblite.swinky.style.Stylesheet
 import java.awt.Container
 import javax.swing.*
 import kotlin.system.exitProcess
