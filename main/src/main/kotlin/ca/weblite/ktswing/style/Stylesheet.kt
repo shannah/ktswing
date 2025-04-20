@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.style
+package ca.weblite.swinky.style
 
 import java.awt.Component
 import java.awt.Container
@@ -304,11 +304,11 @@ class Stylesheet {
     fun textComponent(apply: javax.swing.text.JTextComponent.() -> Unit): Style<javax.swing.text.JTextComponent> =
             register(javax.swing.text.JTextComponent::class.java, apply)
 
-    fun borderPane(selector: String, apply: ca.weblite.ktswing.BorderPane.() -> Unit): Style<ca.weblite.ktswing.BorderPane> =
-            register(selector, ca.weblite.ktswing.BorderPane::class.java, apply)
+    fun borderPane(selector: String, apply: ca.weblite.swinky.BorderPane.() -> Unit): Style<ca.weblite.swinky.BorderPane> =
+            register(selector, ca.weblite.swinky.BorderPane::class.java, apply)
 
-    fun borderPane(apply: ca.weblite.ktswing.BorderPane.() -> Unit): Style<ca.weblite.ktswing.BorderPane> =
-            register(ca.weblite.ktswing.BorderPane::class.java, apply)
+    fun borderPane(apply: ca.weblite.swinky.BorderPane.() -> Unit): Style<ca.weblite.swinky.BorderPane> =
+            register(ca.weblite.swinky.BorderPane::class.java, apply)
 
     fun list(selector: String, apply: JList<*>.() -> Unit): Style<JList<*>> =
             register(selector, JList::class.java, apply)

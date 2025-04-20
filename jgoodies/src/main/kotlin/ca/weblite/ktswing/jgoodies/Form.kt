@@ -1,7 +1,7 @@
-package ca.weblite.ktswing.jgoodies
+package ca.weblite.swinky.jgoodies
 
-import ca.weblite.ktswing.AutoAddDisabled
-import ca.weblite.ktswing.extensions.isAutoAddEnabled
+import ca.weblite.swinky.AutoAddDisabled
+import ca.weblite.swinky.extensions.isAutoAddEnabled
 import com.jgoodies.forms.factories.DefaultComponentFactory
 import com.jgoodies.forms.layout.CellConstraints
 import com.jgoodies.forms.layout.FormLayout

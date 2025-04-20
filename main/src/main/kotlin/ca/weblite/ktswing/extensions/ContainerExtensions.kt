@@ -1,7 +1,7 @@
-package ca.weblite.ktswing.extensions
+package ca.weblite.swinky.extensions
 
-import ca.weblite.ktswing.AutoAddDisabled
-import ca.weblite.ktswing.BorderPane
+import ca.weblite.swinky.AutoAddDisabled
+import ca.weblite.swinky.BorderPane
 import java.awt.*
 import javax.swing.JSplitPane
 import java.util.WeakHashMap
@@ -22,7 +22,7 @@ val Container.factory: MutableMap<Class<out Component>, () -> Component>
     get() = containerFactoryMap.getOrPut(this) { mutableMapOf() }
 
 infix fun JComponent.at(pos: Any): JComponent {
-    val container = this.getClientProperty("ktswing.Container") as? Container
+    val container = this.getClientProperty("swinky.Container") as? Container
     container?.add(this, pos)
     return this
 }
@@ -39,7 +39,7 @@ inline fun <reified T : Component> Container.createComponent(
     if (isAutoAddEnabled()) {
         add(component)
     } else if (component is JComponent) {
-        component.putClientProperty("ktswing.Container", this)
+        component.putClientProperty("swinky.Container", this)
         if (this is JScrollPane) {
             this.setViewportView(component)
         }

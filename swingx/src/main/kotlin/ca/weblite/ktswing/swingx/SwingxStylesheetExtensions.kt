@@ -1,7 +1,7 @@
-package ca.weblite.ktswing.swingx
+package ca.weblite.swinky.swingx
 
-import ca.weblite.ktswing.style.Style
-import ca.weblite.ktswing.style.Stylesheet
+import ca.weblite.swinky.style.Style
+import ca.weblite.swinky.style.Stylesheet
 import org.jdesktop.swingx.JXImagePanel
 import org.jdesktop.swingx.JXSearchField
 

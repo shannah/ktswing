@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.codegen
+package ca.weblite.swinky.codegen
 
 import java.awt.Component
 import java.awt.Container
@@ -107,7 +107,7 @@ object CodeGenerator {
         // 4) For each subpackage group, write a single "SwingBuilders.kt"
         for ((subPkg, classes) in pkgMap) {
             val newPackage = buildString {
-                append("ca.weblite.ktswing")
+                append("ca.weblite.swinky")
                 if (subPkg.isNotEmpty()) {
                     append(".")
                     append(subPkg)
@@ -126,9 +126,9 @@ object CodeGenerator {
             val fileContent = """
                 package $newPackage
 
-                import ca.weblite.ktswing.extensions.isAutoAddEnabled
-                import ca.weblite.ktswing.extensions.getFactoryForComponent
-                import ca.weblite.ktswing.extensions.createComponent
+                import ca.weblite.swinky.extensions.isAutoAddEnabled
+                import ca.weblite.swinky.extensions.getFactoryForComponent
+                import ca.weblite.swinky.extensions.createComponent
                 import javax.swing.*
                 import java.awt.Container
                 import java.awt.Component

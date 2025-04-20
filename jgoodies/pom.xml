@@ -7,13 +7,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>ca.weblite</groupId>
-        <artifactId>ktswing-root</artifactId>
+        <artifactId>swinky-root</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ktswing-jgoodies</artifactId>
+    <artifactId>swinky-jgoodies</artifactId>
     <packaging>jar</packaging>
-    <name>ktswing-jgoodies</name>
+    <name>swinky-jgoodies</name>
 
     <properties>
 
@@ -31,7 +31,7 @@
         <!-- *** Depend on the codegen JAR *** -->
         <dependency>
             <groupId>ca.weblite</groupId>
-            <artifactId>ktswing-main</artifactId>
+            <artifactId>swinky-main</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

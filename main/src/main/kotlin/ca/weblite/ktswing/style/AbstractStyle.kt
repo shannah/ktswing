@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.style
+package ca.weblite.swinky.style
 
 import java.awt.Component
 

@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.extensions
+package ca.weblite.swinky.extensions
 
 import java.awt.Component
 import java.awt.event.MouseAdapter

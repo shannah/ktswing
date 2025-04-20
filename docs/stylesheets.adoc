@@ -1,6 +1,6 @@
-= Introduction to Using Stylesheets in KT-Swing
+= Introduction to Using Stylesheets in Swinky
 
-KT-Swing provides a powerful `Stylesheet` class that allows developers to define and apply styles to Swing components in a declarative and reusable way. This approach simplifies UI customization and promotes consistency across your application.
+Swinky provides a powerful `Stylesheet` class that allows developers to define and apply styles to Swing components in a declarative and reusable way. This approach simplifies UI customization and promotes consistency across your application.
 
 == What is a Stylesheet?
 
@@ -15,7 +15,7 @@ A `Stylesheet` is a collection of styles that can be applied to Swing components
 
 == Selectors
 
-Selectors in KT-Swing are inspired by CSS selectors and allow you to target components based on their attributes. Below are some common types of selectors:
+Selectors in Swinky are inspired by CSS selectors and allow you to target components based on their attributes. Below are some common types of selectors:
 
 === ID Selector
 
@@ -99,7 +99,7 @@ Here is an example:
 
 [source,kotlin]
 ----
-import ca.weblite.ktswing.style.Stylesheet
+import ca.weblite.swinky.style.Stylesheet
 import javax.swing.JButton
 import javax.swing.JPanel
 

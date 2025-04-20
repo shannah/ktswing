@@ -1,4 +1,4 @@
-package ca.weblite.ktswing.coroutines
+package ca.weblite.swinky.coroutines
 
 import java.util.concurrent.Executor
 import javax.swing.SwingUtilities

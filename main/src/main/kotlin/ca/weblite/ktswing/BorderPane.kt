@@ -1,4 +1,4 @@
-package ca.weblite.ktswing
+package ca.weblite.swinky
 
 import java.awt.BorderLayout
 import java.awt.Component
