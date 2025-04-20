@@ -1,8 +1,9 @@
 = Swingky: Kotlin Extensions for Swing
-
 :toc:
+:toc-title: Table of Contents
 
 image::https://img.shields.io/maven-central/v/ca.weblite/swinky-main.svg?label=Maven%20Central[Maven Central]
+
 
 == Overview
 
