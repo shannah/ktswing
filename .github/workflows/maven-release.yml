@@ -27,9 +27,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          server-id: 'ossrh'
-          server-username: OSSRH_USERNAME
-          server-password: OSSRH_PASSWORD
+          server-id: 'central'
+          server-username: MAVEN_CENTRAL_USERNAME
+          server-password: MAVEN_CENTRAL_PASSWORD
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
           overwrite-settings: true
@@ -44,25 +44,13 @@ jobs:
             --batch-mode \
             -ntp
 
-      - name: Debug environment
-        run: |
-          env | grep OSSRH
-        env:
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-
-      - name: Print contents of ~/.m2/settings.xml
-        run: cat ~/.m2/settings.xml
-
-
-
     # 4) Build and Deploy artifacts to Maven Central
       - name: Build and Deploy
         run: mvn -B clean deploy --batch-mode -ntp -Psign-artifacts
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          OSSRH_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
 
       # 5) Optional verification message
       - name: Verify
