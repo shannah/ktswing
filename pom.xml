@@ -31,13 +31,14 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <!--
     <distributionManagement>
         <repository>
             <id>central</id>
             <url>https://central.sonatype.com/api/v1/publisher/maven</url>
         </repository>
     </distributionManagement>
-
+    -->
     <licenses>
         <license>
             <!-- Example: MIT -->
