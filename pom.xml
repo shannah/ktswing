@@ -97,30 +97,6 @@
                 </plugins>
             </build>
         </profile>
-        <profile>
-            <id>ossrh</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <!-- The Nexus Staging Maven Plugin -->
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.13</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <!-- 'ossrh' matches the <serverId> in your <settings.xml> (or GitHub Actions) -->
-                            <serverId>ossrh</serverId>
-                            <!-- Switch if your group uses 'https://oss.sonatype.org/' instead -->
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
     </profiles>
 
     <build>
